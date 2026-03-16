@@ -1,91 +1,91 @@
-# AI-Assisted Journal System ✍️🌿
+# AI-Assisted Journal System
 
-A sleek, full-stack application designed to enhance your journaling experience. Write about your nature sessions and leverage Google Gemini AI to unlock deep insights into your emotions, recurring themes, and personal growth.
-
----
-
-## 🚀 Key Features
-
-- **Nature-Centric Journaling**: Select an ambience (Forest, Ocean, Mountain) to set the mood for your entries.
-- **Instant AI Analysis**: Powered by Google Gemini, the system automatically extracts:
-  - **Emotions**: Identifies the primary sentiment of your entry.
-  - **Keywords**: Highlights the core themes and topics.
-  - **Summary**: Provides a concise overview of your thoughts.
-- **Insights Dashboard**: Visualize patterns and aggregated data from your past entries to track your emotional journey.
+This is a full-stack application designed to help you keep track of your thoughts and experiences. You can write journal entries about your time in nature, and the system uses Google Gemini AI to analyze your entries for emotions, key themes, and summaries.
 
 ---
 
-## 🛠️ Tech Stack
+## Key Features
 
-- **Frontend**: React + Vite (Fast & Modern UI)
-- **Backend**: Node.js + Express (Robust API Layer)
-- **Database**: SQLite (Lightweight & Portable)
-- **AI Integration**: Google Gemini API (Advanced NLP)
+- **Nature-Based Journaling**: You can choose between different settings like Forest, Ocean, or Mountain to set the tone for your journal entry.
+- **AI Analysis**: The system uses Google Gemini to automatically look at your text and pick out:
+  - **Emotions**: It identifies the main feeling of your entry.
+  - **Keywords**: It lists the important topics you mentioned.
+  - **Summary**: It gives you a short overview of what you wrote.
+- **Insights Dashboard**: You can see patterns and combined data from your past entries to help you understand your emotional trends over time.
 
 ---
 
-## ⚙️ Setup & Installation
+## Technical Stack
 
-### 1. Prerequisites
-- **Node.js** (v16 or higher)
-- **npm** (comes with Node.js)
-- **Google Gemini API Key** (Instructions below)
+- **Frontend**: Built with React and Vite for a fast and smooth user interface.
+- **Backend**: Uses Node.js and Express to handle the API and logic.
+- **Database**: Uses SQLite, which is easy to set up and move around.
+- **AI**: Integrated with the Google Gemini API for natural language processing.
 
-### 2. Backend Configuration
-1. Navigate to the backend directory:
+---
+
+## Setup and Installation
+
+### 1. What You Need
+- **Node.js** (version 16 or newer)
+- **npm** (this comes with Node)
+- **Google Gemini API Key** (I've included instructions on how to get this below)
+
+### 2. Setting Up the Backend
+1. Go to the backend folder:
    ```bash
    cd backend
    ```
-2. Install dependencies:
+2. Install the necessary packages:
    ```bash
    npm install
    ```
-3. Configure Environment Variables:
-   Open the `.env` file and set your API key:
+3. Set up your environment variables:
+   Open the `.env` file and put your API key in:
    ```env
    GEMINI_API_KEY=your_actual_api_key_here
    ```
 
-#### 🔑 How to get a Google Gemini API Key:
-1. Visit [Google AI Studio](https://aistudio.google.com/).
+#### How to get a Google Gemini API Key:
+1. Go to [Google AI Studio](https://aistudio.google.com/).
 2. Sign in with your Google account.
-3. Click on **"Get API key"** in the sidebar.
-4. Click **"Create API key"** (select a project or create a new one).
-5. Copy the generated key and paste it into your `backend/.env` file.
+3. Click on "Get API key" in the side menu.
+4. Click "Create API key". You might need to select a project or just create a new one.
+5. Copy the key and paste it into the `backend/.env` file.
 
-4. Start the server:
+4. Start the backend server:
    ```bash
    npm start
    ```
-   *The backend will run on `http://localhost:5000` and initialize `database.db` automatically.*
+   The backend will run on `http://localhost:5000` and will create the `database.db` file automatically.
 
-### 3. Frontend Configuration
-1. Open a new terminal and navigate to the frontend directory:
+### 3. Setting Up the Frontend
+1. Open a new terminal window and go to the frontend folder:
    ```bash
    cd frontend
    ```
-2. Install dependencies:
+2. Install the frontend packages:
    ```bash
    npm install
    ```
-3. Launch the development server:
+3. Start the development server:
    ```bash
    npm run dev
    ```
-   *The application will be available at `http://localhost:5173`.*
+   You can then open the app at `http://localhost:5173`.
 
 ---
 
-## 🧪 API Reference
+## API Summary
 
-| Endpoint | Method | Description |
+| Endpoint | Method | Purpose |
 | :--- | :--- | :--- |
-| `/api/journal` | `POST` | Save a new journal entry |
-| `/api/journal/:userId` | `GET` | Retrieve all entries for a specific user |
-| `/api/journal/analyze` | `POST` | Analyze text via AI for emotion and keywords |
-| `/api/journal/insights/:userId` | `GET` | Get aggregated emotional insights |
+| /api/journal | POST | Saves a new journal entry |
+| /api/journal/:userId | GET | Gets all entries for a certain user |
+| /api/journal/analyze | POST | Uses the AI to analyze text for feelings and keywords |
+| /api/journal/insights/:userId | GET | Gets a summary of emotional data over time |
 
 ---
 
-## 📝 License
-Created as part of the Arvyax Assignment.
+## License
+Created for the Arvyax Assignment.
